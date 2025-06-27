@@ -44,20 +44,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>Preparing your download...</h1>
-    <p>If your download doesn’t start automatically, <a id="manualLink" href="ebook.pdf" download>click here</a>.</p>
+    <h1>Thanks for Registering!</h1>
+    <p>Your eBook is downloading... If it doesn't, <a href="https://www.digitalmarketer.com/digital-marketing/assets/pdf/ultimate-guide-to-digital-marketing.pdf" target="_blank" download>click here</a>.</p>
   </div>
 
   <script>
     window.onload = function() {
       setTimeout(() => {
         const link = document.createElement("a");
-        link.href = "ebook.pdf";
-        link.setAttribute("download", "Digital-Marketing-Guide.pdf");
+        link.href = "https://www.digitalmarketer.com/digital-marketing/assets/pdf/ultimate-guide-to-digital-marketing.pdf";
+        link.setAttribute("download", "Ultimate-Guide-Digital-Marketing.pdf");
+        link.target = "_blank";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      }, 1000); // wait 1 second before starting download
+      }, 1000); // 1-second delay for smooth experience
     };
   </script>
 </body>
