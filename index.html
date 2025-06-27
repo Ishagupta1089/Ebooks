@@ -11,22 +11,69 @@
     gtag('config', 'G-VF14M9F4BG');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free eBook Download</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Your Free eBook</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      color: #007BFF;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    label {
+      text-align: left;
+      display: block;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Download Your Free eBook</h1>
-  <p>Fill out the form to access your free eBook on digital marketing trends.</p>
+  <div class="container">
+    <h1>Get Your Free eBook</h1>
+    <p>Enter your details below to access our exclusive digital marketing eBook.</p>
+    <form id="lead_form" action="download.html" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-  <form id="lead_form" action="download.html" method="get">
-    <label for="name">Name:</label><br />
-    <input type="text" id="name" name="name" required><br /><br />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" required><br /><br />
-
-    <button type="submit">Submit & Download</button>
-  </form>
+      <button type="submit">Submit & Download</button>
+    </form>
+  </div>
 </body>
 </html>
