@@ -11,20 +11,54 @@
     gtag('config', 'G-VF14M9F4BG');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Download is Starting...</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #28a745;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007bff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Your eBook is Ready!</h1>
-  <p>Click the button below to download your free eBook.</p>
+  <div class="container">
+    <h1>Thanks for Registering!</h1>
+    <p>Your eBook is downloading...</p>
+    <a href="thankyou.html">Click here if it doesn't start</a>
+  </div>
 
-  <!-- Add your actual file link here -->
-  <a href="ebook.pdf" id="download_btn" download>
-    <button>Download Now</button>
-  </a>
-
-  <br /><br />
-  <a href="thankyou.html">Go to Thank You Page</a>
+  <!-- 🔽 Auto-download the PDF after page loads -->
+  <script>
+    window.onload = function() {
+      const link = document.createElement('a');
+      link.href = 'ebook.pdf';
+      link.download = 'Digital-Marketing-Guide.pdf';
+      link.click();
+    };
+  </script>
 </body>
 </html>
