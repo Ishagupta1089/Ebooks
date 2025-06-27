@@ -45,20 +45,18 @@
 <body>
   <div class="container">
     <h1>Thanks for Registering!</h1>
-    <p>Your eBook is downloading... If it doesn't, <a href="https://www.digitalmarketer.com/digital-marketing/assets/pdf/ultimate-guide-to-digital-marketing.pdf" target="_blank" download>click here</a>.</p>
+    <p>Your eBook is downloading... If it doesn't, <a href="https://www.digitalmarketer.com/digital-marketing/assets/pdf/ultimate-guide-to-digital-marketing.pdf" target="_blank">click here to download</a>.</p>
   </div>
 
   <script>
     window.onload = function() {
+      // Simulate the download
       setTimeout(() => {
         const link = document.createElement("a");
         link.href = "https://www.digitalmarketer.com/digital-marketing/assets/pdf/ultimate-guide-to-digital-marketing.pdf";
-        link.setAttribute("download", "Ultimate-Guide-Digital-Marketing.pdf");
         link.target = "_blank";
-        document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
-      }, 1000); // 1-second delay for smooth experience
+      }, 1000); // delay for better user experience
     };
   </script>
 </body>
